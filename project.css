@@ -1,8 +1,3 @@
-/* ============================================================
-   PROJECT.CSS — CodeByEmmanuel Portfolio
-   ============================================================ */
-
-
 /* ─── RESET & BASE ─────────────────────────────────────────── */
 
 *, *::before, *::after {
@@ -88,21 +83,6 @@ canvas {
   max-width: 400px;
 }
 
-
-/* ─── PROJECT COUNT — TOP RIGHT ────────────────────────────── */
-
-.project-count {
-  position: absolute;
-  top: clamp(28px, 5vh, 60px);
-  right: clamp(28px, 5vw, 80px);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: clamp(13px, 1vw, 15px);
-  color: #aaaaaa; /* was #888888 */
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
 
 .project-count span {
   font-family: 'Cormorant Garamond', serif;
