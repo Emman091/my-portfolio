@@ -225,7 +225,7 @@ canvas {
   position: absolute;
   right: clamp(16px, 5vw, 80px);
   bottom: clamp(20px, 6vh, 72px);
-  max-width: clamp(45%, 28vw, 360px);
+  max-width: clamp(48%, 28vw, 360px);
   text-align: right;
 }
 
@@ -241,8 +241,8 @@ canvas {
 
 .bio p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(14px, 1.6vw, 23px);
-  line-height: 1.9;
+  font-size: clamp(19px, 1.6vw, 23px);
+  line-height: 2;
   color: #cccccc;
   font-weight: 400;
 }
