@@ -1,3 +1,8 @@
+/* ============================================================
+   INDEX.CSS — CodeByEmmanuel Portfolio
+   ============================================================ */
+
+
 /* ─── RESET & BASE ─────────────────────────────────────────── */
 
 *, *::before, *::after {
@@ -89,16 +94,16 @@ canvas {
 
 .header {
   position: absolute;
-  top: clamp(28px, 5vh, 60px);
-  left: clamp(28px, 5vw, 72px);
-  max-width: clamp(240px, 38vw, 500px);
+  top: clamp(20px, 5vh, 60px);
+  left: clamp(16px, 5vw, 72px);
+  max-width: clamp(55%, 38vw, 500px);
 }
 
 /* Name — brightest, most important */
 .header h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(30px, 3.8vw, 54px); /* was 26px min */
-  font-weight: 400; /* was 300 — bolder for contrast */
+  font-size: clamp(24px, 3.8vw, 54px);
+  font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.15;
   color: #ffffff;
@@ -106,27 +111,27 @@ canvas {
 
 /* Role — slightly dimmed, secondary info */
 .role {
-  margin-top: 12px; /* was 10px */
-  font-size: clamp(15px, 1.4vw, 19px);
-  color: #aaaaaa; /* was #888888 — better contrast */
-  font-weight: 400; /* was 300 */
+  margin-top: 10px;
+  font-size: clamp(13px, 1.4vw, 19px);
+  color: #aaaaaa;
+  font-weight: 400;
   letter-spacing: 0.4px;
-  line-height: 1.75; /* was 1.7 */
+  line-height: 1.75;
   max-width: 400px;
 }
 
 /* CTA Button */
 .project-html {
   display: inline-block;
-  margin-top: 26px; /* was 22px */
-  padding: 11px 24px; /* was 10px 22px */
-  border: 1px solid rgba(255, 255, 255, 0.45); /* was 0.35 */
+  margin-top: 18px;
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 6px;
-  color: #ffffff; /* was #dddddd */
+  color: #ffffff;
   text-decoration: none;
-  font-size: clamp(14px, 1.2vw, 16px);
+  font-size: clamp(12px, 1.2vw, 16px);
   font-weight: 400;
-  letter-spacing: 1px; /* was 0.8px */
+  letter-spacing: 1px;
   transition: all 0.3s ease;
 }
 
@@ -142,13 +147,13 @@ canvas {
 
 .status {
   position: absolute;
-  top: clamp(28px, 5vh, 60px);
-  right: clamp(28px, 5vw, 80px);
+  top: clamp(20px, 5vh, 60px);
+  right: clamp(16px, 5vw, 80px);
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: clamp(13px, 1vw, 15px);
-  color: #aaaaaa; /* was #888888 */
+  font-size: clamp(10px, 1vw, 15px);
+  color: #aaaaaa;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -174,18 +179,18 @@ canvas {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: clamp(28px, 5vw, 72px);
+  left: clamp(16px, 5vw, 72px);
   display: flex;
   flex-direction: column;
-  gap: clamp(14px, 2.5vh, 22px); /* was 10px–16px */
+  gap: clamp(10px, 2.5vh, 22px);
 }
 
 .menu a {
   text-decoration: none;
-  color: #aaaaaa; /* was #888888 */
-  font-size: clamp(15px, 1.5vw, 18px);
+  color: #aaaaaa;
+  font-size: clamp(13px, 1.5vw, 18px);
   font-weight: 400;
-  letter-spacing: 1.5px; /* was 1.2px */
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: color 0.25s ease;
   position: relative;
@@ -218,33 +223,33 @@ canvas {
 
 .bio {
   position: absolute;
-  right: clamp(28px, 5vw, 80px);
-  bottom: clamp(28px, 6vh, 72px);
-  max-width: clamp(220px, 28vw, 360px); /* was 200px–340px */
+  right: clamp(16px, 5vw, 80px);
+  bottom: clamp(20px, 6vh, 72px);
+  max-width: clamp(45%, 28vw, 360px);
   text-align: right;
 }
 
 .bio::before {
   content: "";
   display: block;
-  width: 36px; /* was 32px */
+  width: 36px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.35); /* was 0.25 */
+  background: rgba(255, 255, 255, 0.35);
   margin-left: auto;
-  margin-bottom: 20px; /* was 16px */
+  margin-bottom: 16px;
 }
 
 .bio p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 1.6vw, 23px); /* was 17px–22px */
-  line-height: 2.1; /* was 2 */
-  color: #cccccc; /* was #bbbbbb */
-  font-weight: 400; /* was 300 */
+  font-size: clamp(14px, 1.6vw, 23px);
+  line-height: 1.9;
+  color: #cccccc;
+  font-weight: 400;
 }
 
 .bio p strong {
   color: #ffffff;
-  font-weight: 600; /* was 500 */
+  font-weight: 600;
 }
 
 
