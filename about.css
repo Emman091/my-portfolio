@@ -1,3 +1,7 @@
+/* ============================================================
+   ABOUT.CSS — CodeByEmmanuel Portfolio
+   ============================================================ */
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body { background: #0a0a0a; height: 100%; }
@@ -26,7 +30,7 @@ canvas {
 .frame {
   position: fixed;
   inset: clamp(12px, 2.5vw, 28px);
-  border: 1px solid rgba(255, 255, 255, 0.22); /* was 0.15 */
+  border: 1px solid rgba(255, 255, 255, 0.22);
   z-index: 2;
 }
 
@@ -42,28 +46,42 @@ canvas {
 
 .header {
   position: absolute;
-  top: clamp(28px, 5vh, 60px);
-  left: clamp(28px, 5vw, 72px);
-  max-width: clamp(240px, 38vw, 500px);
+  top: clamp(16px, 5vh, 60px);
+  left: clamp(16px, 5vw, 72px);
+  max-width: clamp(55%, 38vw, 500px);
+  z-index: 3;
 }
 
 .header h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(30px, 3.8vw, 54px); /* was 26px */
-  font-weight: 400; /* was 300 */
+  font-size: clamp(24px, 4.5vw, 58px);
+  font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.15;
   color: #ffffff;
 }
 
 .role {
-  margin-top: 12px; /* was 10px */
-  font-size: clamp(15px, 1.4vw, 19px);
-  color: #aaaaaa; /* was #888888 */
-  font-weight: 400; /* was 300 */
+  margin-top: 8px;
+  font-size: clamp(13px, 1.6vw, 20px);
+  color: #aaaaaa;
+  font-weight: 400;
   letter-spacing: 0.4px;
-  line-height: 1.75; /* was 1.7 */
+  line-height: 1.75;
   max-width: 400px;
+}
+
+/* ─── PAGE LABEL — TOP RIGHT ───────────────────────────────── */
+
+.page-label {
+  position: absolute;
+  top: clamp(16px, 5vh, 60px);
+  right: clamp(16px, 5vw, 80px);
+  font-size: clamp(11px, 1vw, 15px);
+  color: #aaaaaa;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 3;
 }
 
 /* ─── NAV — LEFT CENTER ────────────────────────────────────── */
@@ -72,18 +90,19 @@ canvas {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: clamp(28px, 5vw, 72px);
+  left: clamp(16px, 5vw, 72px);
   display: flex;
   flex-direction: column;
-  gap: clamp(14px, 2.5vh, 22px); /* was 10px–16px */
+  gap: clamp(10px, 2.5vh, 22px);
+  z-index: 3;
 }
 
 .menu a {
   text-decoration: none;
-  color: #aaaaaa; /* was #888888 */
-  font-size: clamp(15px, 1.5vw, 18px);
+  color: #aaaaaa;
+  font-size: clamp(13px, 1.8vw, 20px);
   font-weight: 400;
-  letter-spacing: 1.5px; /* was 1.2px */
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: color 0.25s ease;
   position: relative;
@@ -93,7 +112,7 @@ canvas {
 .menu a::after {
   content: "";
   position: absolute;
-  left: 0; bottom: -4px; /* was -3px */
+  left: 0; bottom: -4px;
   width: 0%; height: 1px;
   background: #ffffff;
   transition: width 0.3s ease;
@@ -106,81 +125,84 @@ canvas {
 
 .bio {
   position: absolute;
-  right: clamp(28px, 5vw, 80px);
-  bottom: clamp(28px, 6vh, 72px);
-  max-width: clamp(220px, 28vw, 360px); /* was 200px–340px */
+  right: clamp(16px, 5vw, 80px);
+  bottom: clamp(20px, 6vh, 72px);
+  max-width: clamp(45%, 32vw, 400px);
   text-align: right;
+  z-index: 3;
 }
 
 /* Photo */
 .bio-photo {
-  width: clamp(80px, 10vw, 130px);
-  height: clamp(80px, 10vw, 130px);
+  width: clamp(55px, 9vw, 120px);
+  height: clamp(55px, 9vw, 120px);
   object-fit: cover;
   border-radius: 4px;
   margin-left: auto;
   display: block;
-  margin-bottom: 18px; /* was 16px */
+  margin-bottom: 12px;
   filter: grayscale(20%);
   transition: all 0.4s ease;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08); /* was 0.06 */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
 }
 
 .bio-photo:hover {
   transform: scale(1.04);
   filter: grayscale(0%);
-  box-shadow: 0 0 35px rgba(255, 255, 255, 0.15); /* was 0.12 */
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.15);
 }
 
 /* Decorative line */
 .bio-line {
-  width: 36px; /* was 32px */
+  width: 36px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.35); /* was 0.25 */
+  background: rgba(255, 255, 255, 0.35);
   margin-left: auto;
-  margin-bottom: 20px; /* was 16px */
+  margin-bottom: 14px;
 }
 
-/* Bio text */
+/* Bio text — same as homepage bio */
 .bio p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 1.6vw, 23px); /* was 17px–22px */
-  line-height: 2.1; /* was 2 */
-  color: #cccccc; /* was #bbbbbb */
-  font-weight: 400; /* was 300 */
+  font-size: clamp(15px, 2vw, 26px);
+  line-height: 1.9;
+  color: #cccccc;
+  font-weight: 400;
 }
 
 .bio p strong {
   color: #ffffff;
-  font-weight: 600; /* was 500 */
+  font-weight: 600;
 }
 
 /* ─── LOCATION TAG — BOTTOM CENTER ────────────────────────── */
 
 .location-tag {
   position: absolute;
-  bottom: clamp(14px, 2.5vh, 28px);
+  bottom: clamp(10px, 2vh, 24px);
   left: 50%;
   transform: translateX(-50%);
-  font-size: clamp(11px, 1vw, 13px);
-  color: #666666; /* was #555555 */
-  letter-spacing: 4px; /* was 3px */
+  font-size: clamp(9px, 1vw, 13px);
+  color: #666666;
+  letter-spacing: 4px;
   text-transform: uppercase;
   white-space: nowrap;
+  z-index: 3;
 }
 
 /* ─── SIDE MODES — LEFT EDGE ───────────────────────────────── */
 
 .side-modes {
   position: absolute;
-  left: clamp(6px, 0.8vw, 10px);
-  bottom: clamp(60px, 14vh, 110px);
+  left: clamp(4px, 0.8vw, 10px);
+  bottom: clamp(50px, 14vh, 110px);
   display: flex;
   flex-direction: column;
-  gap: 16px; /* was 14px */
-  font-size: clamp(9px, 0.85vw, 11px);
-  color: #666666; /* was #555555 */
+  gap: 14px;
+  font-size: clamp(8px, 0.85vw, 11px);
+  color: #666666;
   letter-spacing: 2.5px;
+  z-index: 3;
 }
 
 .side-modes span {
@@ -190,4 +212,4 @@ canvas {
   transition: color 0.2s ease;
 }
 
-.side-modes span:hover { color: #bbbbbb; } /* was #aaaaaa */
+.side-modes span:hover { color: #bbbbbb; }
