@@ -30,7 +30,7 @@ canvas {
 .frame {
   position: fixed;
   inset: clamp(12px, 2.5vw, 28px);
-  border: 1px solid rgba(255, 255, 255, 0.22); /* was 0.15 */
+  border: 1px solid rgba(255, 255, 255, 0.22);
   z-index: 2;
 }
 
@@ -46,30 +46,42 @@ canvas {
 
 .header {
   position: absolute;
-  top: clamp(28px, 5vh, 60px);
-  left: clamp(28px, 5vw, 72px);
-  max-width: clamp(240px, 38vw, 500px);
+  top: clamp(16px, 5vh, 60px);
+  left: clamp(16px, 5vw, 72px);
+  max-width: clamp(55%, 38vw, 500px);
+  z-index: 3;
 }
 
 .header h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(30px, 3.8vw, 54px); /* was 26px */
-  font-weight: 400; /* was 300 */
+  font-size: clamp(24px, 4.5vw, 58px);
+  font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.15;
   color: #ffffff;
 }
 
 .role {
-  margin-top: 12px; /* was 10px */
-  font-size: clamp(18px, 1.4vw, 19px);
-  color: #aaaaaa; /* was #888888 */
-  font-weight: 400; /* was 300 */
+  margin-top: 8px;
+  font-size: clamp(13px, 1.6vw, 20px);
+  color: #aaaaaa;
+  font-weight: 400;
   letter-spacing: 0.4px;
-  line-height: 1.75; /* was 1.7 */
+  line-height: 1.75;
 }
 
+/* ─── PAGE LABEL — TOP RIGHT ───────────────────────────────── */
 
+.page-label {
+  position: absolute;
+  top: clamp(16px, 5vh, 60px);
+  right: clamp(16px, 5vw, 80px);
+  font-size: clamp(11px, 1vw, 15px);
+  color: #aaaaaa;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 3;
+}
 
 /* ─── NAV — LEFT CENTER ────────────────────────────────────── */
 
@@ -77,18 +89,19 @@ canvas {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: clamp(28px, 5vw, 72px);
+  left: clamp(16px, 5vw, 72px);
   display: flex;
   flex-direction: column;
-  gap: clamp(14px, 2.5vh, 22px); /* was 10px–16px */
+  gap: clamp(10px, 2.5vh, 22px);
+  z-index: 3;
 }
 
 .menu a {
   text-decoration: none;
-  color: #aaaaaa; /* was #888888 */
-  font-size: clamp(15px, 1.5vw, 18px);
+  color: #aaaaaa;
+  font-size: clamp(13px, 1.8vw, 20px);
   font-weight: 400;
-  letter-spacing: 1.5px; /* was 1.2px */
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: color 0.25s ease;
   position: relative;
@@ -98,7 +111,7 @@ canvas {
 .menu a::after {
   content: "";
   position: absolute;
-  left: 0; bottom: -4px; /* was -3px */
+  left: 0; bottom: -4px;
   width: 0%; height: 1px;
   background: #ffffff;
   transition: width 0.3s ease;
@@ -114,12 +127,13 @@ canvas {
 
 .contact-content {
   position: absolute;
-  right: clamp(28px, 5vw, 80px);
-  bottom: clamp(28px, 6vh, 72px);
-  width: clamp(200px, 35vw, 460px);
-  max-height: 70vh;
+  right: clamp(16px, 5vw, 80px);
+  bottom: clamp(20px, 6vh, 72px);
+  left: clamp(120px, 30vw, 320px); /* stops overlap with nav */
+  max-height: 72vh;
   overflow-y: auto;
   padding-right: 4px;
+  z-index: 3;
 }
 
 /* Scrollbar */
@@ -132,15 +146,15 @@ canvas {
 .direct-contact {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* was 6px */
+  gap: 6px;
   text-align: right;
   margin-bottom: 4px;
 }
 
 .direct-contact a {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(16px, 1.5vw, 20px);
-  color: #aaaaaa; /* was #888888 */
+  font-size: clamp(14px, 1.5vw, 20px);
+  color: #aaaaaa;
   text-decoration: none;
   letter-spacing: 0.5px;
   transition: color 0.2s ease;
@@ -150,30 +164,30 @@ canvas {
 
 /* Decorative line */
 .contact-line {
-  width: 36px; /* was 32px */
+  width: 36px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.35); /* was 0.25 */
+  background: rgba(255, 255, 255, 0.35);
   margin-left: auto;
-  margin-top: 16px; /* was 14px */
-  margin-bottom: 18px; /* was 16px */
+  margin-top: 14px;
+  margin-bottom: 16px;
 }
 
 /* Form */
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px; /* was 10px */
+  gap: 10px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 6px; /* was 5px */
+  gap: 5px;
 }
 
 label {
-  font-size: clamp(12px, 1vw, 14px);
-  color: #666666; /* was #555555 */
+  font-size: clamp(11px, 1vw, 14px);
+  color: #666666;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -183,10 +197,10 @@ textarea,
 select {
   width: 100%;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15); /* was 0.1 */
-  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 10px 12px;
   color: #eaeaea;
-  font-size: clamp(16px, 1.4vw, 18px);
+  font-size: clamp(14px, 1.4vw, 18px);
   font-family: 'Syne', sans-serif;
   outline: none;
   transition: border-color 0.3s ease;
@@ -198,13 +212,13 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: rgba(255, 255, 255, 0.45); /* was 0.35 */
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #555555; /* was #444444 — more visible */
-  font-size: clamp(16px, 1.4vw, 18px);
+  color: #555555;
+  font-size: clamp(14px, 1.4vw, 18px);
 }
 
 select option {
@@ -214,29 +228,28 @@ select option {
 
 textarea {
   resize: none;
-  min-height: 80px;
+  min-height: 70px;
 }
 
 /* Send button */
 .send-btn {
   margin-top: 4px;
-  padding: 12px 24px;
+  padding: 10px 22px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.45); /* was 0.35 */
-  color: #ffffff; /* was #dddddd */
-  font-size: clamp(14px, 1.2vw, 16px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  font-size: clamp(13px, 1.2vw, 16px);
   font-family: 'Syne', sans-serif;
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-align: right;
   align-self: flex-end;
 }
 
 .send-btn:hover {
-  background: rgba(255, 255, 255, 0.1); /* was 0.08 */
+  background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.8); /* was 0.7 */
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .send-btn:disabled {
@@ -246,8 +259,8 @@ textarea {
 
 /* Status message */
 .status {
-  font-size: clamp(13px, 1vw, 15px);
-  color: #aaaaaa; /* was #888888 */
+  font-size: clamp(12px, 1vw, 15px);
+  color: #aaaaaa;
   text-align: right;
   letter-spacing: 0.5px;
   min-height: 18px;
@@ -261,28 +274,30 @@ textarea {
 
 .location-tag {
   position: absolute;
-  bottom: clamp(14px, 2.5vh, 28px);
+  bottom: clamp(10px, 2vh, 24px);
   left: 50%;
   transform: translateX(-50%);
-  font-size: clamp(11px, 1vw, 13px);
-  color: #666666; /* was #555555 */
-  letter-spacing: 4px; /* was 3px */
+  font-size: clamp(9px, 1vw, 13px);
+  color: #666666;
+  letter-spacing: 4px;
   text-transform: uppercase;
   white-space: nowrap;
+  z-index: 3;
 }
 
 /* ─── SIDE MODES — LEFT EDGE ───────────────────────────────── */
 
 .side-modes {
   position: absolute;
-  left: clamp(6px, 0.8vw, 10px);
-  bottom: clamp(60px, 14vh, 110px);
+  left: clamp(4px, 0.8vw, 10px);
+  bottom: clamp(50px, 14vh, 110px);
   display: flex;
   flex-direction: column;
-  gap: 16px; /* was 14px */
-  font-size: clamp(9px, 0.85vw, 11px);
-  color: #666666; /* was #555555 */
+  gap: 14px;
+  font-size: clamp(8px, 0.85vw, 11px);
+  color: #666666;
   letter-spacing: 2.5px;
+  z-index: 3;
 }
 
 .side-modes span {
@@ -292,4 +307,4 @@ textarea {
   transition: color 0.2s ease;
 }
 
-.side-modes span:hover { color: #bbbbbb; } /* was #aaaaaa */
+.side-modes span:hover { color: #bbbbbb; }
