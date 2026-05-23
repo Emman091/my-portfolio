@@ -156,7 +156,7 @@ canvas {
 .bio-content {
   position: absolute;
   right: clamp(16px, 5vw, 80px);
-  top: 42%;
+  top: clamp(65px, 14vh, 110px);
   bottom: clamp(28px, 6vh, 72px);
   left: clamp(120px, 30vw, 320px);
   overflow-y: auto;
